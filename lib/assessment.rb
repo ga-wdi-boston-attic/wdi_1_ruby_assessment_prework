@@ -6,6 +6,12 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
+  string.to_i
+  counter = 0
+  while counter < string
+    return(string)
+    counter +=1
+  end
 end
 
 # Question 2
@@ -21,6 +27,14 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
+  response.to_i
+  if response % 3 == 0
+    return "fizz"
+  elsif response % 5 == 0
+    return "buzz"
+  elsif response % 5 == 0 && response % 3 == 0
+    return "fizzbuzz"
+  else print(response)
 end
 
 # Question 3
@@ -31,6 +45,13 @@ end
 # add_element_to_array([1, 2], 3) #=> [1, 2, 3]
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
 def add_element_to_array(array, item)
+  print " elements to populate your array:"
+  array = []
+  response1 = gets.chomp
+  array.push(response1)
+  print "add further elements to your array:"
+  response2 = gets.chomp
+  array.push(response2)
 end
 
 
@@ -48,5 +69,16 @@ end
 # For example:
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
-def blackjack?(card_one, card_two)
-end
+
+#def blackjack?(card_one, card_two)
+ # j = 10
+#  q = 10
+ # k = 10
+  #a = 1 || 11
+  #while true
+   # puts "please enter the value of the first card or j/q/k/a"
+    #card1 = gets.chomp
+    #puts "please enter the value of the first card or j/q/k/a"
+    #card2 = gets.chomp
+    #card1.to_i + card2.to_i
+#end
