@@ -1,3 +1,5 @@
+# Much better version.
+
 # Question 1
 # This function should take an integer as an argument
 # and output a string that contains that integer that number of times in a row
@@ -5,8 +7,17 @@
 # For example:
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
+
 def string_it_x_times(x)
+  out = ''
+  index = 0
+  while index < x
+    out = out + "#{x}"
+    index += 1
+  end
+return out
 end
+
 
 # Question 2
 # This function should take an integer as an argument
@@ -21,6 +32,17 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
+  result = ''
+  if x%3 == 0 && x%5 !=0
+    result = "fizz"
+  elsif x%5 ==0 && x%3 !=0
+    result = "buzz"
+  elsif x%5 == 0 && x%3 ==0
+    result = "fizzbuzz"
+  else
+    result = x
+  end
+  return result
 end
 
 # Question 3
@@ -31,6 +53,8 @@ end
 # add_element_to_array([1, 2], 3) #=> [1, 2, 3]
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
 def add_element_to_array(array, item)
+  list_of_elements = []
+  list_of_elements = array.push(item)
 end
 
 
@@ -49,4 +73,11 @@ end
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
+  if card_one == card_one = "j" || card_one = "k" || card_one = "q"
+    card_one = 10
+  end
+  if card_two == card_two = "j" || card_two = "k" || card_two = "q"
+    card_two = 10
+  end
+  result = card_one + card_two
 end
