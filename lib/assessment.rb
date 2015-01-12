@@ -89,6 +89,3 @@ def blackjack?(card_one, card_two)
     false
   end
 end
-
-
-end
