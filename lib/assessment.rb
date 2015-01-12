@@ -7,10 +7,7 @@
 # string_it_x_times(2) #=> "22"
 
 def string_it_x_times(x)
-  x.times do
-    return x
-  end
-
+  x.to_s * x
 end
 
 
@@ -31,9 +28,13 @@ end
 
 
 def fizz_or_buzz(x)
-  return "fizzbuzz" if x%3 == 0 && x%5==0
-  return "fizz" if x%3 == 0
-  return "buzz" if x%5 == 0
+  if x % 3 == 0
+    x % 5 == 0 ? "fizzbuzz" : "fizz"
+  elsif x % 5 == 0
+    "buzz"
+  else
+    x
+  end
 end
 
 
@@ -68,4 +69,26 @@ end
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
+  if card_one == "j" || card_one == "q" || card_one == "k"
+    card_one = 10
+  end
+  if card_two == "j" || card_two == "q" || card_two == "k"
+    card_two = 10
+  end
+  if card_one == "a" && card_two == "a"
+    card_one = 11
+    card_two = 1
+  elsif card_one == "a"
+    card_one = 11
+  elsif card_two == "a"
+    card_two = 11
+  end
+  if card_one + card_two == 21
+    true
+  else
+    false
+  end
+end
+
+
 end
