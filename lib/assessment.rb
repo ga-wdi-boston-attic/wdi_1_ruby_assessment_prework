@@ -5,7 +5,7 @@
 # For example:
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
-def string_it_x_times(x)
+ a = ("4" *4)
 end
 
 # Question 2
@@ -20,7 +20,9 @@ end
 # fizz_or_buzz(10) #=> "buzz"
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
-def fizz_or_buzz(x)
+ if (x) / 3 == 0 puts (fizz)
+else 
+(x) / 5 == 0 puts (buzz)
 end
 
 # Question 3
@@ -30,7 +32,7 @@ end
 # For example:
 # add_element_to_array([1, 2], 3) #=> [1, 2, 3]
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
-def add_element_to_array(array, item)
+ a.push(1,2,3)
 end
 
 
