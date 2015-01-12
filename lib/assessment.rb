@@ -6,6 +6,7 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
+display(string_it_x_times(5)) => "55555"
 end
 
 # Question 2
@@ -21,6 +22,10 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
+fizz_or_buzz(3) => "fizz"
+fizz_or_buzz(14) => "buzz"
+fizz_or_buzz(15) => "fizzbuzz"
+fizz_or_buzz(7) => 7
 end
 
 # Question 3
@@ -28,9 +33,11 @@ end
 # The function should return the array, with the element inserted at the end
 # Do not use puts!
 # For example:
-# add_element_to_array([1, 2], 3) #=> [1, 2, 3]
-# add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
+#
 def add_element_to_array(array, item)
+array.each(fruit, apples)
+push.fruit(oranges)
+push.fruit(bananas)
 end
 
 
