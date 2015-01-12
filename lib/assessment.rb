@@ -6,7 +6,9 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
+   puts("x"*x)
 end
+string_it_x_times(x)
 
 # Question 2
 # This function should take an integer as an argument
@@ -21,8 +23,17 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
+  if x%15==0
+    return "fizzbuzz"
+  elsif x%3==0
+    return "fizz"
+  elsif x%5==0
+    return "buzz"
+  elsif
+    return "x"
+  end
 end
-
+fizz_buzz(x)
 # Question 3
 # This function should take an array and an element of any type
 # The function should return the array, with the element inserted at the end
