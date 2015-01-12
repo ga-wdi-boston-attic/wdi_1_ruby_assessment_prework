@@ -60,13 +60,21 @@ end
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
-sum = card_one + card_one
-j = 10
-q = 10
-k = 10
-if sum >= 20
-  a = 1
-elsif sum < 20-10
-  a = 11
+  sum = card_one + card_one
+  "j" = 10
+  "q" = 10
+  "k" = 10
+  if sum >= 20
+    a = 1
+    elsif sum < 20-10
+    a = 11
+  end
+
+  if sum = 21
+    blackjack = true
+  else
+    blackjack = false
+  end
+end
 
 end
