@@ -6,6 +6,11 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
+  total = 0
+  while total < x
+    puts x
+    total += 1
+  end
 end
 
 # Question 2
@@ -21,6 +26,17 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
+  for num in (1..x)
+    if (num % 3 == 0) && (num % 5 == 0)
+      puts "fizzbuzz"
+    elsif num % 3 == 0
+      puts "fizz"
+    elsif num % 5 == 0
+      puts "buzz"
+    else
+      puts num
+    end
+  end
 end
 
 # Question 3
@@ -31,6 +47,7 @@ end
 # add_element_to_array([1, 2], 3) #=> [1, 2, 3]
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
 def add_element_to_array(array, item)
+  array.push(item)
 end
 
 
