@@ -6,7 +6,9 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
+  string_it_x_times = x.to_s() * x
 end
+string_it_x_times(2)
 
 # Question 2
 # This function should take an integer as an argument
@@ -21,6 +23,16 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
+  if x % 3
+    fizz_or_buzz = "fizz"
+  elsif x % 5
+    fizz_or_buzz = "buzz"
+  elsif x % 3 == 0 && x % 5 == 0
+    fizz_or_buzz = "fizzbuzz"
+  else
+    fizz_or_buzz = x
+end
+
 end
 
 # Question 3
@@ -31,6 +43,8 @@ end
 # add_element_to_array([1, 2], 3) #=> [1, 2, 3]
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
 def add_element_to_array(array, item)
+  add_element_to_array = array
+  add_element_to_array.push(item)
 end
 
 
