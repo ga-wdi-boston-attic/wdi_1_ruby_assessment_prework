@@ -6,6 +6,11 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
+  out = ''
+  for i in 1..x
+    out = out + "#{x}"
+  end
+  return out
 end
 
 # Question 2
@@ -21,6 +26,17 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
+  out = ''
+  if x%3 == 0
+    out = out + 'fizz'
+  end
+  if x%5 == 0
+    out = out + 'buzz'
+  end
+  if x%3 !=0 && x%5 != 0
+    out = x
+  end
+  return out
 end
 
 # Question 3
@@ -31,6 +47,8 @@ end
 # add_element_to_array([1, 2], 3) #=> [1, 2, 3]
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
 def add_element_to_array(array, item)
+  array << item
+  return array
 end
 
 
@@ -49,4 +67,54 @@ end
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
+  sum = 0
+  if card_one == "j" || card_one == "q" || card_one == "k"
+    sum += 10
+  end
+  if card_two == "j" || card_one == "q" || card_one == "k"
+    sum += 10
+  end
+
+  test = Integer(card_one) rescue false
+  if test == card_one.to_i
+    sum += card_one.to_i
+  end
+
+  test2 = Integer(card_two) rescue false
+  if test2 == card_two.to_i
+    sum += card_two.to_i
+  end
+
+  if card_one == 'a'
+    sum1 = sum + 1
+    sum2 = sum + 11
+  end
+
+  if sum2 > 21
+    sum = sum1
+  else
+    sum = sum2
+  end
+
+  if card_two == 'a'
+    sum1 = sum + 1
+    sum2 = sum + 11
+  end
+
+  if sum2 > 21
+    sum = sum1
+  else
+    sum = sum2
+  end
+
+  if card_one == 'a' && card_two == 'a'
+    sum = 12
+  end
+
+  if sum == 21
+    return 'true'
+  else
+    return false
+  end
+
 end
