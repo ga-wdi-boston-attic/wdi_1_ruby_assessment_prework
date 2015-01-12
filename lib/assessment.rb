@@ -67,4 +67,3 @@ def blackjack?(card_one, card_two)
 
 end
 
-string_it_x_times(4)
