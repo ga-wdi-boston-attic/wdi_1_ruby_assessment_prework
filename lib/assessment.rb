@@ -61,20 +61,22 @@ end
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
   sum = card_one + card_one
-  "j" = 10
-  "q" = 10
-  "k" = 10
-  if sum >= 20
-    a = 1
-    elsif sum < 20-10
-    a = 11
-  end
+    if sum == 21
+      blackjack = true
+    else
+      blackjack = false
+    end
 
-  if sum = 21
-    blackjack = true
-  else
-    blackjack = false
-  end
+    if card_one == "j" || card_one == "q" || card_one == "k"
+      card_one = 10
+    elsif card_two == "j" || card_two == "q" || card_two == "k"
+      card_two = 10
+    end
+
+    if card_one == "a" && 1 + card_two == 21
+      card_one = 1
+    elsif card_one == "a" && 11 + card_two <=21
+      card_one = 11
+    end
 end
 
-end
