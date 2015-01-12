@@ -5,8 +5,16 @@
 # For example:
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
+
 def string_it_x_times(x)
+  x.times do
+    return x
+  end
+
 end
+
+
+
 
 # Question 2
 # This function should take an integer as an argument
@@ -20,8 +28,14 @@ end
 # fizz_or_buzz(10) #=> "buzz"
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
+
+
 def fizz_or_buzz(x)
+  return "fizzbuzz" if x%3 == 0 && x%5==0
+  return "fizz" if x%3 == 0
+  return "buzz" if x%5 == 0
 end
+
 
 # Question 3
 # This function should take an array and an element of any type
@@ -30,8 +44,13 @@ end
 # For example:
 # add_element_to_array([1, 2], 3) #=> [1, 2, 3]
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
+
+
 def add_element_to_array(array, item)
+  return array << item
 end
+
+
 
 
 
