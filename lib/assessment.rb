@@ -6,6 +6,13 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
+  count = 0
+  phrase = ""
+  while count < x
+    phrase = phrase + "#{x}"
+    count = count + 1
+  end
+  "#{phrase}"
 end
 
 # Question 2
@@ -21,6 +28,15 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
+  if x % 3 == 0 && x % 5 == 0
+    "fizzbuzz"
+  elsif x % 3 == 0
+    "fizz"
+  elsif x % 5 == 0
+    "buzz"
+  else
+    x
+  end
 end
 
 # Question 3
@@ -31,6 +47,8 @@ end
 # add_element_to_array([1, 2], 3) #=> [1, 2, 3]
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
 def add_element_to_array(array, item)
+  array = array.push(item)
+  array
 end
 
 
@@ -49,4 +67,14 @@ end
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
+  if card_one == "j" || card_one == "q" || card_one == "k"
+    card_one = 10
+  end
+  if card_two == "j" || card_two == "q" || card_two == "k"
+    card_two = 10
+  end
+  if card_one == "a" && card_two == "a"
+    card_one = 11
+    card_two = 1
+  end
 end
