@@ -60,4 +60,15 @@ end
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
+  face = [10, 'j', 'q', 'k']
+
+  #p face.include?(10)
+  if card_one == 'a' && face.include?(card_two)
+    true
+  elsif face.include?(card_one) && card_two == 'a'
+    true
+  else
+    false
+  end
+
 end
