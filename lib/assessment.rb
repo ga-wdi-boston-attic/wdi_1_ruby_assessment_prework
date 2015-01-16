@@ -69,7 +69,11 @@ def blackjack?(card_one, card_two)
   elsif card_one == 'k'
     card_one = 10
   elsif card_one == 'a'
-    card_one = 11
+    if card_two != 'a'
+      card_one = 11
+    else
+      card_one = 1
+    end
   end
   if card_two == 'j'
     card_two = 10
@@ -78,7 +82,11 @@ def blackjack?(card_one, card_two)
   elsif card_two == 'k'
     card_two = 10
   elsif card_two == 'a'
-    card_two = 11
+    if card_one != 'a'
+      card_two = 11
+    else
+      card_two = 1
+    end
   end
   if card_one + card_two == 21
     true
