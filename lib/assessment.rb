@@ -6,8 +6,7 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
-  # (x.times x.to_s * x
-
+  x.to_s * x
 end
 
 # Question 2
@@ -42,6 +41,7 @@ end
 # add_element_to_array([1, 2], 3) #=> [1, 2, 3]
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
 def add_element_to_array(array, item)
+  array.push(item)
 end
 
 
