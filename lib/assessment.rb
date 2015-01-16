@@ -42,6 +42,8 @@ end
 # add_element_to_array([1, 2], 3) #=> [1, 2, 3]
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
 def add_element_to_array(array, item)
+  array << item
+  array
 end
 
 
