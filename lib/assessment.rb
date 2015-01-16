@@ -6,7 +6,13 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
-  x.to_s
+  string = ''
+  index = 0
+  while index < x
+    string = string + x.to_s
+    index +=1
+  end
+  return string
 end
 
 # Question 2
@@ -61,4 +67,7 @@ end
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
+  card_one =  []
+  card_two = []
+
 end
