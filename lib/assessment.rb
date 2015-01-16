@@ -25,13 +25,13 @@ end
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
 
-    if x = x % 5 == 0 && x = x % 3 == 0
+    if x % 5 == 0 && x % 3 == 0
       "fizzbuzz"
     elsif
-       x = x % 5 == 0
+       x % 5 == 0
        "buzz"
     elsif
-      x = x % 3 == 0
+      x % 3 == 0
       "fizz"
     else
     x
