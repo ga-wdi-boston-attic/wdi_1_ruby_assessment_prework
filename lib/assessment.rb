@@ -6,6 +6,7 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
+  x.to_s * x
 end
 
 # Question 2
