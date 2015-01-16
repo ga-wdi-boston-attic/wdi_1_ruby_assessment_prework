@@ -64,5 +64,50 @@ end
 # For example:
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
+
 def blackjack?(card_one, card_two)
+  cards = {
+    royal: {
+    king: 10
+    queen: 10
+    jack: 10
+    ten: 10
+    }
+    numbered: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  }
+
+  a = 'a'
+
+def ace
+  if card_one == :royal
+    a = 10
+  else
+    a = 1
 end
+
+def blackjack?
+end
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
