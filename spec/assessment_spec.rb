@@ -28,7 +28,7 @@ end
 # Bonus, optional. See `lib/assessment.rb` for more details
 RSpec.describe 'blackjack?' do
   it 'takes two arguments, either integers or strings representing playing cards, and returns true if the sum of the values is 21, false if any other number' do
-    expect(blackjack?(10, 'a')).to eq true
-    expect(blackjack?(5, 4)).to eq false
+    expect(blackjack?(10, 'a')).to be true
+    expect(blackjack?(5, 4)).to be false
   end
 end
