@@ -33,6 +33,7 @@ end
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
 def add_element_to_array(array, item)
   3 = add_element_to_array.push
+  add_element_to_array.push = 'baz'
 end
 
 
