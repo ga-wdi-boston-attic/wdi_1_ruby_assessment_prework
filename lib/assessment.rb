@@ -60,4 +60,30 @@ end
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
+  if card_one == "a"
+    card_one == 11
+  elsif card_one == "j"
+    card_one == 10
+  elsif card_one == "q"
+    card_one == 10
+  else card_one == "k"
+    card_one == 10
+  end
+
+    if card_twp == "a"
+    card_two == 11
+  elsif card_two == "j"
+    card_one == 10
+  elsif card_two == "q"
+    card_two == 10
+  else card_two == "k"
+    card_two == 10
+  end
+
+
+
+  if card_one + card_two == 21
+    return true
+  else false
+  end
 end
