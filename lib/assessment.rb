@@ -22,12 +22,12 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
-  if x % 3 == 0 || x % 5 == 0
-    fizz_or_buzz
+  if x % 3 == 0 && x % 5 == 0
+    "fizzbuzz"
   elsif x % 5 == 0
-    buzz
+    "buzz"
   elsif x % 3 == 0
-    fizz
+    "fizz"
   else
     x
   end
@@ -60,4 +60,5 @@ end
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
+
 end
