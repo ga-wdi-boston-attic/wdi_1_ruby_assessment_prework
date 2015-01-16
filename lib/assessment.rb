@@ -59,4 +59,21 @@ end
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
+  values = {
+    2 => 2,
+    3 => 3,
+    4 => 4,
+    5 => 5,
+    6 => 6,
+    7 => 7,
+    8 => 8,
+    9 => 9,
+    10 => 10,
+    "j" => 10,
+    "q" => 10,
+    "k" => 10,
+    "a" => 11
+  }
+
+  card_one == "a" && card_two == "a" ? false : values[card_one] + values[card_two] == 21
 end
