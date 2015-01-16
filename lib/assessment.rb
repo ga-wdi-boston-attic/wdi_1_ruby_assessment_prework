@@ -22,6 +22,19 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
+  str = ""
+  if x % 3 == 0
+    str += "fizz"
+  end
+
+  if x % 5 == 0
+    str += "buzz"
+  end
+
+  if x % 3 != 0 && x % 5 != 0
+    str = x
+  end
+  str
 end
 
 # Question 3
