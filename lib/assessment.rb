@@ -1,3 +1,4 @@
+require 'pry-byebug'
 # Question 1
 # This function should take an integer as an argument
 # and output a string that contains that integer that number of times in a row
@@ -6,6 +7,7 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
+  x.to_s * x
 end
 
 # Question 2
@@ -21,6 +23,19 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
+  str = ""
+  if x % 3 == 0
+    str += "fizz"
+  end
+
+  if x % 5 == 0
+    str += "buzz"
+  end
+
+  if x % 3 != 0 && x % 5 != 0
+    str = x
+  end
+  str
 end
 
 # Question 3
@@ -31,6 +46,7 @@ end
 # add_element_to_array([1, 2], 3) #=> [1, 2, 3]
 # add_element_to_array(['fizz', 'buzz'], 'baz') #=> ['fizz', 'buzz', 'baz']
 def add_element_to_array(array, item)
+  array << item
 end
 
 
@@ -48,5 +64,17 @@ end
 # For example:
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
+VALUE = {2 => 2, 3 => 3, 4=> 4, 5 => 5, 6 => 6, 7 => 7, 8 => 8, 9 => 9, 10 => 10, "j" => 10, "q" => 10, "k" => 10}
 def blackjack?(card_one, card_two)
+  sum = 0
+  if card_one != "a" && card_two == "a"
+    sum =VALUE[card_one] + 11 > 21 ? VALUE[card_one] + 1 : VALUE[card_one] + 11
+  elsif card_one == "a" && card_two != "a"
+    sum = VALUE[card_two] + 11 > 21 ? VALUE[card_two] + 1 : VALUE[card_two] + 11
+  elsif card_one == "a" && card_two == "a"
+    sum = 12
+  else
+    sum = VALUE[card_one] + VALUE[card_two]
+  end
+  sum == 21
 end
