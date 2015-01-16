@@ -67,7 +67,9 @@ end
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
 def blackjack?(card_one, card_two)
-  card_one =  []
-  card_two = []
-
+  'a' = 11
+  'j' = 10
+  'q' = 10
+  'k' = 10
+  card_one.to_i + card_two.to_i == 21
 end
