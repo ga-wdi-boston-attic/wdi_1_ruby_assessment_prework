@@ -6,7 +6,7 @@
 # string_it_x_times(4) #=> "4444"
 # string_it_x_times(2) #=> "22"
 def string_it_x_times(x)
-  x * 4
+  x.to_s * x
 end
 
 # Question 2
@@ -22,6 +22,15 @@ end
 # fizz_or_buzz(15) #=> "fizzbuzz"
 # fizz_or_buzz(2) #=> 2
 def fizz_or_buzz(x)
+  if x % 3 == 0 && x % 5 == 0
+    "fizzbuzz"
+  elsif x % 3 == 0
+    "fizz"
+  elsif x % 5 == 0
+    "buzz"
+  else
+    x
+  end
 end
 
 # Question 3
