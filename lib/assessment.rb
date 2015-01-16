@@ -1,3 +1,4 @@
+require 'pry-byebug'
 # Question 1
 # This function should take an integer as an argument
 # and output a string that contains that integer that number of times in a row
@@ -63,5 +64,27 @@ end
 # For example:
 # blackjack?(10, 'a') #=> true
 # blackjack?(5, 4) #=> false
+VALUE = {2 => 2, 3 => 3, 4=> 4, 5 => 5, 6 => 6, 7 => 7, 8 => 8, 9 => 9, 10 => 10, "j" => 10, "q" => 10, "k" => 10}
 def blackjack?(card_one, card_two)
+  sum = 0
+  if card_one != "a" && card_two == "a"
+
+    sum =VALUE[card_one] + 11 > 21 ? VALUE[card_one] + 1 : VALUE[card_one] + 11
+
+  elsif card_one == "a" && card_two != "a"
+
+    sum = VALUE[card_two] + 11 > 21 ? VALUE[card_two] + 1 : VALUE[card_two] + 11
+
+  elsif card_one == "a" && card_two == "a"
+
+    sum = 12
+
+  else
+
+  sum = VALUE[card_one] + VALUE[card_two]
+
+  end
+
+  sum == 21
+
 end
